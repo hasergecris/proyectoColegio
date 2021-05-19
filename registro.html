@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Registro Alumnos</title>
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+    rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="fontawesome-5.10.1/css/all.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <div class="container-fluid">
+
+    <div class="registro">
+
+      <header>
+        <nav class="navbar navbar-expand-md fixed-top">
+          <div class="container-fluid">
+            <h3 class="navbar-brand">Colegio N.S de la Alegria</h3>
+            <div class="nav justify-content-end " id="navbarCollapse">
+              <a class="nav-link">Ingresar</a>
+              <button class="btn-registrar">Registrarse</button>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+
+      <div id="intro">
+        <img class="w-100" src="img/fondo.png" />
+      </div>
+
+      <div id="zonaRegistro">
+        <h1 class="text-center">Regístrate</h1>
+        <p class="text-center">Diligencia los campos y crea tu Usuario</p>
+
+        <div class="card">
+          <div class="row">
+            <div class="col-5" id="zonaImagen">
+              <img class="escudo" src="img/escudo.png" alt="" class="img">
+            </div>
+
+            <div class="col-7" id="formularioRegistro">
+              <form action="">
+                <div>
+                  <label for="nombre" class="form-label">Nombres <span class="simbolo">*</span></label>
+                  <input type="text" class="form-control text-center">
+                </div>
+
+                <div class="mb-2">
+                  <label for="apellido" class="form-label">Apellidos <span class="simbolo">*</span></label>
+                  <input type="text" class="form-control">
+                </div>
+
+                <div>
+                  <label for="correo" class="form-label">Correo Electronico <span class="simbolo">*</span></label>
+                  <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp">
+                </div>
+
+                <div>
+                  <label for="contraseña" class="form-label">Contraseña <span class="simbolo">*</span></label>
+                  <input type="password" class="form-control" id="Email1">
+
+                </div>
+                <div class="form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label>Acepto los <a href="#" class="terminos"> Terminos y condiciones </a></label>
+                </div>
+
+                <div class="d-flex justify-content-end">
+                  <button type="submit" class="btn-registro btn-primary"> <a href="login.html">Registrar</a> </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,266 @@
+/* GLOBLALES */
+:root {
+  --color-texto: #373652;
+  --negro: #212d39;
+  --gris-oscuro: #4c6f91;
+  --gris: #7b889f;
+  --bordes: #dde6f8;
+  --fondo: #f8f9fc;
+  --gris-claro: #f0f1f5;
+  --color-parrafos: #6e869e;
+  --textoRegistro: #8fa5bc;
+  --rosa-claro: #fceaf5;
+  --rosado: #eb5995;
+  --morado: #b557fd;
+  --barra: #fdfdfd;
+  --linea_borde: #f6f7f7;
+  --blancos: #ffffff;
+  --contenido-principal: #fefdff;
+  --crema-claro: #fdf2da;
+  --piel: #fcead3;
+  --azul-claro: #dbe6fd;
+  --amarillo-quemado: #f0cc3e;
+  --naranja: #ee7d33;
+  --azul-verdoso: #c6f0fc;
+  --logo-section: #24d6eb;
+  --hover-claro: #2adff5;
+  --fondo-botones: #3edff2;
+  --verdoso: #24d6eb;
+  --azul: #6c69f4;
+  --fondo-menu: #e0fafd;
+  --morado-claro: #f3e2fd;
+  --boton-oscuro: #4341b7;
+  --hover-oscuro: #514ddf;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* HEADER */
+
+.nav-link {
+  color: var(--color-parrafos);
+  font-size: 16px;
+  font-weight: 200;
+  margin-right: 2rem;
+  display: flex;
+  align-self: center;
+}
+
+.fixed-top {
+  position: absolute;
+  padding: 1% 3%;
+}
+
+.btn-registrar {
+  color: var(--blancos);
+  background: var(--fondo-botones);
+  border: none;
+  font-size: 1rem;
+  width: 8rem;
+  height: 3.25rem;
+  border-radius: 5rem;
+  font-weight: 400;
+}
+
+.btn-registrar:hover {
+  color: var(--blancos);
+  text-decoration: none;
+  background: var(--verdoso);
+}
+
+/* REGISTRO */
+
+.card {
+  border-radius: 0.5rem;
+  border: none;
+  box-shadow: 10px 10px 10px var(--bordes);
+}
+
+.fixed-top {
+  position: absolute;
+  padding: 2% 3%;
+}
+
+.nav-registro {
+  color: var(--color-parrafos);
+  font-size: 1rem;
+  text-decoration: none;
+}
+.nav-registro i {
+  margin-right: 1rem;
+  font-size: 1.154rem;
+}
+
+.escudo {
+  width: 12rem;
+  height: 12rem;
+}
+
+#zonaRegistro {
+  position: absolute;
+  top: 10%;
+  padding: 0% 17%;
+  width: 100%;
+}
+
+#zonaRegistro h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--color-texto);
+  margin-top: 3rem;
+}
+
+#zonaRegistro p {
+  font-size: 1rem;
+  color: var(--textoRegistro);
+  font-weight: 200;
+  margin-bottom: 2.5rem;
+}
+
+#zonaImagen {
+  padding: 9% 5%;
+  background-color: var(--azul);
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#formularioRegistro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.simbolo {
+  color: var(--rosado);
+}
+
+label {
+  font-size: 0.875rem;
+  color: var(--color-parrafos);
+  font-weight: 300;
+}
+
+label .terminos {
+  color: var(--azul);
+}
+
+.form-control {
+  width: 21.25rem;
+  height: 2.5rem;
+  border: 1px solid var(--bordes);
+  border-radius: 0.5rem;
+}
+
+/* BOTONES */
+
+.btn-registro {
+  width: 8rem;
+  height: 2.563rem;
+  color: var(--blancos);
+  background: var(--verdoso);
+  font-size: 1rem;
+  border-radius: 5rem;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-registro:hover {
+  background: var(--hover-claro);
+}
+
+.btn-registro a {
+  color: var(--blancos);
+  text-decoration: none;
+}
+
+/* LOGIN */
+
+.nav-login {
+  color: var(--color-parrafos);
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+.nav-login i {
+  margin-right: 1rem;
+  font-size: 1.154rem;
+}
+
+#zonaLogin {
+  position: absolute;
+  top: 20%;
+  padding: 0% 17%;
+  width: 100%;
+}
+
+#zonaLogin h1 {
+  font-size: 2.25rem;
+  font-weight: 300;
+  color: var(--color-texto);
+  padding-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+#zonaLogin p {
+  font-size: 0.875rem;
+  color: var(--textoRegistro);
+  font-weight: 200;
+  margin-bottom: 2.5rem;
+}
+
+#zonaLogin p a {
+  color: var(--azul);
+}
+
+#formularioLogin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.simbolo {
+  color: var(--rosado);
+}
+
+label {
+  font-size: 0.875rem;
+  color: var(--color-parrafos);
+  font-weight: 300;
+}
+
+.recuperar {
+  color: var(--azul);
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+.form-control {
+  width: 21.25rem;
+  height: 2.5rem;
+  border: 1px solid var(--bordes);
+  border-radius: 0.5rem;
+}
+
+.btn-login {
+  width: 8rem;
+  height: 2.563rem;
+  color: var(--blancos);
+  background: var(--verdoso);
+  font-size: 1rem;
+  border-radius: 5rem;
+  font-weight: 400;
+  text-decoration: none;
+  border: none;
+}
+
+.btn-login:hover {
+  background: var(--hover-claro);
+}
