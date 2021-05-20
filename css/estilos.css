@@ -35,9 +35,14 @@
 
 body {
   font-family: "Montserrat", sans-serif;
+  background: var(--fondo);
 }
 
 /* HEADER */
+
+#intro{
+    position: relative;
+  }
 
 .nav-link {
   color: var(--color-parrafos);
