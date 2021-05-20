@@ -105,7 +105,7 @@ body {
 
 #zonaRegistro {
   position: absolute;
-  top: 10%;
+  top: 20%;
   padding: 0% 17%;
   width: 100%;
 }
@@ -269,3 +269,58 @@ label {
 .btn-login:hover {
   background: var(--hover-claro);
 }
+
+/* FOOTER */
+
+.footer {
+    padding: 2% 5%;
+    background: rgb(254,253,255);
+    background: linear-gradient(90deg, rgba(254,253,255,1) 0%, rgba(245,248,252,1) 100%);
+  }
+  .footer p {
+    font-size: 1rem;
+    font-weight: 300;
+    color: var(--textoRegistro);
+  }
+  
+  .enlaces {
+    display: flex;
+    text-decoration: none;
+    color:var(--color-parrafos);
+    text-align: left;
+    line-height: 3rem;
+  }
+    
+  .final {
+    color: var(--textoRegistro);
+    font-size: 0.875rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 0.5rem;
+    margin-top: 4rem;
+  }
+
+  .footer-iconos {
+      text-align: center;
+  }
+
+  
+  .footer-iconos p {
+    color:var(--color-parrafos);
+    font-size:1.125rem;
+    font-weight:400;
+  }
+  
+  .footer-iconos a {
+      color:var(--textoRegistro);
+      font-size: 1rem;
+  }
+
+  
+  .iconos  {
+    color:var(--azul);
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    justify-content: center;
+  }
+  
