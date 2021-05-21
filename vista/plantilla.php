@@ -21,10 +21,47 @@
             <div class="container-fluid">
               <h3 class="navbar-brand">Colegio N.S de la Alegria</h3>
               <div class="nav justify-content-end py-2 nav-pills">
-                <a class="nav-link" href="index.php?pagina=registro">Registrarse</a>
-                <a class="nav-link" href="index.php?pagina=ingreso">Ingresar</a>
-                <a class="nav-link" href="index.php?pagina=inicio">inicio</a>
-                <a class="nav-link" href="index.php?pagina=salir">Salir</a>
+
+         <?php if(isset($_GET["pagina"])):?> 
+                
+              
+              <?php if ($_GET["pagina"]== "registro"):?>
+                    <a class="nav-link active" href="index.php?pagina=registro">Registrarse</a>
+                <?php else:?>
+                    <a class="nav-link" href="index.php?pagina=registro">Registrarse</a>
+                <?php endif?>
+                    
+                <?php if ($_GET["pagina"]== "ingreso"):?>
+                    <a class="nav-link active" href="index.php?pagina=ingreso">Ingresar</a>
+                <?php else:?>
+                    <a class="nav-link" href="index.php?pagina=ingreso">Ingresar</a>
+                <?php endif?>
+                     
+                <?php if ($_GET["pagina"]== "inicio"):?>
+                    <a class="nav-link active" href="index.php?pagina=inicio">inicio</a>
+                <?php else:?>
+                    <a class="nav-link" href="index.php?pagina=inicio">inicio</a>
+                <?php endif?>
+                    
+                <?php if ($_GET["pagina"]== "salir"):?>
+                      <a class="nav-link active" href="index.php?pagina=salir">Salir</a>
+                <?php else:?>
+                      <a class="nav-link" href="index.php?pagina=salir">Salir</a>
+                <?php endif?>
+
+                <?php else:?>
+              <a class="nav-link active" href="index.php?pagina=registro">Registrarse</a>
+              <a class="nav-link" href="index.php?pagina=ingreso">Ingresar</a>
+              <a class="nav-link" href="index.php?pagina=inicio">inicio</a>                    
+              <a class="nav-link" href="index.php?pagina=salir">Salir</a>
+
+              <?php endif?>
+                    
+
+
+             
+
+                
               </div>
             </div>
           </nav>
@@ -42,8 +79,11 @@
                $_GET["pagina"] == "inicio" ||
                $_GET["pagina"] == "salir") {
             
-                include "paginas/".$_GET["pagina"].".php";
-
+              include "paginas/".$_GET["pagina"].".php";
+            
+            }else {
+                
+              include "paginas/error404.php";
 
                }
             

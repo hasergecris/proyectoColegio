@@ -40,9 +40,9 @@ body {
 
 /* HEADER */
 
-#intro{
-    position: relative;
-  }
+#intro {
+  position: relative;
+}
 
 .nav-link {
   color: var(--color-parrafos);
@@ -105,16 +105,16 @@ body {
 
 #zonaRegistro {
   position: absolute;
-  top: 20%;
+  top: 15%;
   padding: 0% 17%;
-  width: 100%;
+  width: 90%;
 }
 
 #zonaRegistro h1 {
   font-size: 2.25rem;
   font-weight: 400;
   color: var(--color-texto);
-  margin-top: 3rem;
+  margin-top: 2rem;
 }
 
 #zonaRegistro p {
@@ -273,54 +273,55 @@ label {
 /* FOOTER */
 
 .footer {
-    padding: 2% 5%;
-    background: rgb(254,253,255);
-    background: linear-gradient(90deg, rgba(254,253,255,1) 0%, rgba(245,248,252,1) 100%);
-  }
-  .footer p {
-    font-size: 1rem;
-    font-weight: 300;
-    color: var(--textoRegistro);
-  }
-  
-  .enlaces {
-    display: flex;
-    text-decoration: none;
-    color:var(--color-parrafos);
-    text-align: left;
-    line-height: 3rem;
-  }
-    
-  .final {
-    color: var(--textoRegistro);
-    font-size: 0.875rem;
-    font-weight: 300;
-    text-align: center;
-    line-height: 0.5rem;
-    margin-top: 4rem;
-  }
+  padding: 2% 5%;
+  background: rgb(254, 253, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(254, 253, 255, 1) 0%,
+    rgba(245, 248, 252, 1) 100%
+  );
+}
+.footer p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--textoRegistro);
+}
 
-  .footer-iconos {
-      text-align: center;
-  }
+.enlaces {
+  display: flex;
+  text-decoration: none;
+  color: var(--color-parrafos);
+  text-align: left;
+  line-height: 3rem;
+}
 
-  
-  .footer-iconos p {
-    color:var(--color-parrafos);
-    font-size:1.125rem;
-    font-weight:400;
-  }
-  
-  .footer-iconos a {
-      color:var(--textoRegistro);
-      font-size: 1rem;
-  }
+.final {
+  color: var(--textoRegistro);
+  font-size: 0.875rem;
+  font-weight: 300;
+  text-align: center;
+  line-height: 0.5rem;
+  margin-top: 4rem;
+}
 
-  
-  .iconos  {
-    color:var(--azul);
-    font-size: 1.7rem;
-    margin-top: 1rem;
-    justify-content: center;
-  }
-  
+.footer-iconos {
+  text-align: center;
+}
+
+.footer-iconos p {
+  color: var(--color-parrafos);
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.footer-iconos a {
+  color: var(--textoRegistro);
+  font-size: 1rem;
+}
+
+.iconos {
+  color: var(--azul);
+  font-size: 1.7rem;
+  margin-top: 1rem;
+  justify-content: center;
+}
