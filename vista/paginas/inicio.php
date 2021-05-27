@@ -1,7 +1,7 @@
 
   <div class="row" id="zonaDashboard">
     <div class="col-sm-6 col-md-4">
-      <a href="index.php?pagina=ingreso" class="card mb-4">
+      <a href="index.php?pagina=registro" class="card mb-4">
         <div class="card-body">
           <img src="img/alumnos.jpg" class="imagen" alt="" />
           <div class="d-flex justify-content-center align-items-center">

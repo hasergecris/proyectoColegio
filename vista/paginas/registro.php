@@ -17,17 +17,17 @@
               <form method="post">
                 <div>
                   <label for="nombre" class="form-label">Nombres <span class="simbolo">*</span></label>
-                  <input type="text" class="form-control text-center" id="nombres" name="registroNombre">
+                  <input type="text" class="form-control text-center" id="nombre" name="registroNombre">
                 </div>
 
                 <div class="mb-2">
                   <label for="apellido" class="form-label">Apellidos <span class="simbolo">*</span></label>
-                  <input type="text" class="form-control" id="apellidos" name="registroApellidos">
+                  <input type="text" class="form-control" id="apellido" name="registroApellidos">
                 </div>
 
                 <div>
                   <label for="correo" class="form-label">Correo Electronico <span class="simbolo">*</span></label>
-                  <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp" name="registroEmail">
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="registroEmail">
                 </div>
 
                 <div>
@@ -60,7 +60,7 @@
                                 }
                             </script>';
 
-                      echo '<div class="alert alert-success">El usuario ha sido registrado con exito </div>';
+                      echo '<div class="alert alert-success">El docente ah sido registrado con exito </div>';
                     }
                 ?>
 
