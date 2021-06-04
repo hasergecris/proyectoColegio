@@ -1,18 +1,13 @@
 <?php
-class Conexion {
+ class Conexion  {
+     static public function conectar() {
 
-  static public function conectar() {
-    
-    $link =  new PDO ("mysql:host=localhost;dbname=adsi","root","");
-  
-    $link-> exec("set names utf8");
+         $link = new PDO("mysql:host=localhost;dbname=adsi","root","");
+         $link->exec("set names utf8");
 
-    
-  
-    return $link;
+         return $link;
+     }
+ }
 
-
-  }
-}
 
 ?>

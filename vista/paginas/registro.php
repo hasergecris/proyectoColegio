@@ -1,75 +1,97 @@
-  <div id="intro">
-        <img class="w-100" src="img/fondo.png" />
-  </div>
+<div id="intro">
+  <img class="w-100" src="img/fondo.png" />
+</div>
 
-      <div id="zonaRegistro">
-        <h1 class="text-center">Regístrate</h1>
-        <p class="text-center">Diligencia los campos y crea tu Usuario</p>
+<div id="zonaRegistro">
+  <h1 class="text-center">Regístrate</h1>
+  <p class="text-center">Diligencia los campos y crea tu Usuario</p>
 
-        <div class="card">
-          <div class="row">
-            <div class="col-5" id="zonaImagen">
-              <img class="escudo" src="img/escudo.png" alt="" class="img">
-            </div>
+  <div class="card">
+    <div class="row">
+      <div class="col-5" id="zonaImagen">
+        <img class="escudo" src="img/escudo.png" alt="" class="img">
+      </div>
 
-            <div class="col-7" id="formularioRegistro">
+      <div class="col-7" id="formularioRegistro">
 
-              <form method="post">
-                <div>
-                  <label for="nombre" class="form-label">Nombres <span class="simbolo">*</span></label>
-                  <input type="text" class="form-control text-center" id="nombre" name="registroNombre">
+         <form  method="post">
+    <h3 class="text-center">Registrar Usuario</h3>
+        <div class="form-group">
+            <label for="id">identificacion:</label>
+            <div class="input-group m-auto">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-fingerprint"></i></span>
+                  </div>
                 </div>
-
-                <div class="mb-2">
-                  <label for="apellido" class="form-label">Apellidos <span class="simbolo">*</span></label>
-                  <input type="text" class="form-control" id="apellido" name="registroApellidos">
-                </div>
-
-                <div>
-                  <label for="correo" class="form-label">Correo Electronico <span class="simbolo">*</span></label>
-                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" name="registroEmail">
-                </div>
-
-                <div>
-                  <label for="contraseña" class="form-label">Contraseña <span class="simbolo">*</span></label>
-                  <input type="password" class="form-control" id="pwd" name="registroPassword">
-
-                </div>
-                <div class="form-check">
-                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                  <label>Acepto los <a href="#" class="terminos"> Terminos y condiciones </a></label>
-                </div>
-
-
-                <?php
-
-                // FORMA QUE SE INSTANCIA LA CLASE DE  UN METODO NO ESTATICO
-                      //  $registro = new ControladorFormularios();
-                      //  $registro -> ctrRegistro();
-
-
-                // FORMA QUE SE INSTANCIA LA CLASE DE  UN METODO ESTATICO
-
-                      $registro = ControladorFormularios::ctrRegistro();
-
-                    if ($registro == "ok") {
-
-                      echo '<script>
-                                if (window.history.replaceState) {
-                                  window.history.replaceState( null,null, window.location.href);
-                                }
-                            </script>';
-
-                      echo '<div class="alert alert-success">El docente ah sido registrado con exito </div>';
-                    }
-                ?>
-
-                <div class="d-flex justify-content-end">
-                  <button type="submit" class="btn-registro btn-primary"> <a href="login.html">Registrar</a> </button>
-                </div>
-              </form>
-            </div>
-          </div>
+                  <input type="text" class="form-control" id="identificacion" name="registroIdentificacion">
         </div>
 
+        <div class="form-group m-2">
+
+            <label for="nombre">Nombre Completo:</label>
+            <div class="input-group m-auto">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+                <input type="text" class="form-control" id="nombre" name="registroNombre">
+            </div>
+        </div>
+
+        <div class="form-group m-2">
+            <label for="usuario">Usuario:</label>
+            <div class="input-group m-auto">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user-check"></i></span>
+                </div>
+            </div>
+            <input type="text" class="form-control" id="usuario" name="registroUsuario">
+        </div>
+
+        <div class="form-group m-2">
+            <label for="">Contraseña:</label>
+            <div class="input-group m-auto">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"></span>
+                </div>
+            </div>
+            <input type="text" class="form-control" id="pwd" name="registroContraseña">
+        </div>
+
+        <?php
+    
+    // metodo no estatico
+
+    //$registro = new ControladorFormularios();
+    //$registro ->ctrRegistro();
+    
+    // metodo estatico
+
+    $registro = ControladorFormularios::ctrRegistro();
+
+     if($registro == "ok"){
+
+// para borrar la cache o datos para limpiar las variables post
+        echo '<script>
+
+           if ( window.history.replaceState ) {
+
+            window.history.replaceState(null,null,window.location.href);
+
+           }
+        </script>';
+
+        echo '<div class="alert alert-success mt-3">El ususario ah sido registrado</div>';
+     }
+
+    ?>
+
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn-registro btn-primary mt-3">Registrar</button>
+        </div>
+    </form>
+
       </div>
+    </div>
+  </div>
+
+</div>

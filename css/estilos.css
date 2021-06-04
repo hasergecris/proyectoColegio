@@ -105,16 +105,16 @@ body {
 
 #zonaRegistro {
   position: absolute;
-  top: 15%;
-  padding: 0% 17%;
-  width: 90%;
+  top: 1%;
+  padding: 0% 10%;
+  width: 100%;
 }
 
 #zonaRegistro h1 {
   font-size: 2.25rem;
   font-weight: 400;
   color: var(--color-texto);
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 #zonaRegistro p {
@@ -299,6 +299,10 @@ font-weight: 600;
   align-items: center;
   align-self: center;
   justify-content: center;
+}
+/* INGRESO DE ALUMNOS */
+#ingresarAlumnos {
+  margin-top: 5rem;
 }
 
 /* FOOTER */

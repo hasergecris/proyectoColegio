@@ -1,82 +1,70 @@
+<?php
 
-  <div class="row" id="zonaDashboard">
-    <div class="col-sm-6 col-md-4">
-      <a href="index.php?pagina=registro" class="card mb-4">
-        <div class="card-body">
-          <img src="img/alumnos.jpg" class="imagen" alt="" />
-          <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-lg">Ingresar Alumnos</button>
-          </div>
-        </div>
-      </a>
-    </div>
+if(!isset($_SESSION["validarIngreso"])) {
 
-    <div class="col-sm-6 col-md-4">
-      <a href="" class="card mb-4">
-        <div class="card-body">
-        <img src="img/gruponiños.jpg" class="imagen" alt=""/>
-          <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-lg">Administrar Grupos</button>
-          </div>
-        </div>
-    </a>
-    </div>
+       echo'<script> window.location = "index.php?pagina=ingreso";</script>';
+  
+         return;
 
-    <div class="col-sm-6 col-md-4">
-      <a href="" class="card mb-4">
-        <div class="card-body">
-        <img src="img/entreganotas.jpg" class="imagen" alt=""/>
-          <div class="d-flex justify-content-center align-items-center">
-           <button class="btn btn-lg">Boletines</button>
-          </div>
-        </div>
-      </a>
-    </div>
 
-    <div class="col-sm-6 col-md-3">
-      <a href="" class="card mb-4">
-        <div class="card-body">
-         <img src="img/profesores.jpg" class="imagen" alt=""/>
-          <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-lg">Administrar Docentes</button>
-          </div>
-        </div>
-      </a>
-    </div>
+    }else{
 
-    <div class="col-sm-6 col-md-3">
-      <a href="" class="card mb-4">
-        <div class="card-body">
-        <img src="img/materias.jpg" class="imagen" alt=""/>
-          <div class="d-flex justify-content-center align-items-center">
-             <button class="btn btn-lg">Registrar Materias</button>
-          </div>
-        </div>
-      </a>
-    </div>
+        if ($_SESSION["validarIngreso"] != "ok" ) {
 
-    <div class="col-sm-6 col-md-3">
-      <a  href="#" class="card mb-4">
-        <div class="card-body">
-        <img src="img/notas.jpg" class="imagen" alt=""/>
-          <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-lg">Registrar Calificaciones</button>
-          </div>
-        </div>
-      </a>
-    </div>
+            echo'<script> window.location = "index.php?pagina=ingreso";</script>';
+            
+            return;
+    }
+}
 
-     <div class="col-sm-6 col-md-3">
-      <a  href="#" class="card mb-4">
-        <div class="card-body">
-        <img src="img/asignaturas.jpg" class="imagen" alt=""/>
-          <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-lg">Materias de Docentes</button>
-          </div>
-        </div>
-      </a>
-    </div>
+         $usuarios = ControladorFormularios::ctrSeleccionarRegistros(null,null);
+?>
 
-     
-  </div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Identificacion</th>
+            <th>Nombre Completo</th>
+            <th>Fecha</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
 
+    <tbody>
+
+    <?php foreach ($usuarios as $key => $value): ?>
+        <tr>
+            <td><?php echo ($key+1);?></td>
+            <td><?php echo $value["identificacion"];?></td>
+            <td><?php echo $value["nombre"];?></td>
+            <td><?php echo $value["fecha"];?></td>
+            <td>
+             
+                <div class="btn group">
+                   <div class="px-1">
+                        <a href= "index.php?pagina=editar&id=<?php echo $value["id"];?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                    </div>
+
+              
+                        <form method="post">
+                            <input type="hidden" value="<?php echo $value["id"];?>" name="eliminarRegistro">
+                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+                       
+                        <?php
+
+                        $eliminar = new  ControladorFormularios();
+                        $eliminar -> ctrEliminarRegistro();
+                        
+                        ?>
+                        
+                        </form>
+
+                </div>
+            </td>
+        </tr>
+        
+    <?php endforeach ?>    
+    </tbody>
+
+</table>

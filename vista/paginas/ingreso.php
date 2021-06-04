@@ -3,7 +3,7 @@
      </div>
 
         <div id="zonaRegistro">
-          <h1 class="text-center">Ingresa</h1>
+          <h1 class="text-center">Ingreso de usuarios</h1>
           <p class="text-center">
             Diligencia los campos y disfruta con nosotros
           </p>
@@ -15,40 +15,40 @@
               </div>
 
               <div class="col-7" id="formularioLogin">
-                <form action="">
-                  <div class="mb-3">
-                    <h1 class="text-center">Bienvenido</h1>
-                    <label for="correo" class="form-label"
-                      >Correo Electrónico <span class="simbolo">*</span></label
-                    >
-                    <input
-                      type="email"
-                      class="form-control"
-                      id="Email1"
-                      aria-describedby="emailHelp"
-                    />
-                  </div>
+               <form class="p-5 bg-light" method="post">
+    <h3 class="text-center p-2">Ingreso de  Usuarios</h3>
+        <div class="form-group m-2">
+            <label for="usuario">Usuario:</label>
+            <div class="input-group m-auto">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-user"></i></span>
+                </div>
+            </div>
+            <input type="text" class="form-control" id="usuario" name="ingresoUsuario">
+        </div>
 
-                  <div class="mb-3">
-                    <label for="contraseña" class="form-label"
-                      >Contraseña <span class="simbolo">*</span></label
-                    >
-                    <input type="password" class="form-control" id="Email1" />
-                  </div>
-                  <a href="#" class="recuperar"> Recuperar Contraseña </a>
+        <div class="form-group m-2">
+            <label for="">Contraseña:</label>
+            <div class="input-group m-auto">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                </div>
+            </div>
+            <input type="password" class="form-control" id="pwd" name="ingresoContraseña">
+        </div>
 
-                  <div class="mb-3 d-flex justify-content-end">
-                    <button type="submit" class="btn-login btn-primary">
-                      Ingresar
-                    </button>
-                  </div>
-                  <div class="text-center">
-                    <p>
-                      ¿No tienes una cuenta?
-                      <a href="registro.html"> Registrar</a>
-                    </p>
-                  </div>
-                </form>
+        <?php
+   
+
+    $ingreso = new ControladorFormularios();
+    $ingreso -> ctrIngreso();
+
+    ?>
+
+        <button type="submit" class="btn btn-primary mt-3">Ingresar</button>
+
+    </form>
+
               </div>
             </div>
           </div>
