@@ -36,7 +36,7 @@
                 ?>
 
                <div class="d-flex justify-content-end">
-                 <button type="submit" class="btn-registro btn-primary mt-3"><a href="index.php?pagina=usuarios">Ingresar</a></button>
+                 <button type="submit" class="btn-registro btn-primary mt-3"><a href="index.php?pagina=inicio">Ingresar</a></button>
                </div>
 
              </form>
