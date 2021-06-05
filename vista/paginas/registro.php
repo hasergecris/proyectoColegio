@@ -14,64 +14,43 @@
 
       <div class="col-7" id="formularioRegistro">
 
-         <form  method="post">
-    <h3 class="text-center">Registrar Usuario</h3>
-        <div class="form-group">
-            <label for="id">identificacion:</label>
-            <div class="input-group m-auto">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-fingerprint"></i></span>
-                  </div>
-                </div>
-                  <input type="text" class="form-control" id="identificacion" name="registroIdentificacion">
-        </div>
+        <form method="post">
+          <h3 class="text-center">Registrar Usuario</h3>
+          <div class="form-group">
+            <label for="id">identificacion: <span class="simbolo">*</span> </label>
+            <input type="text" class="form-control" id="identificacion" name="registroIdentificacion">
+          </div>
 
-        <div class="form-group m-2">
+          <div class="form-group m-2">
+            <label for="nombre">Nombre Completo:<span class="simbolo">*</span> </label>
+            <input type="text" class="form-control" id="nombre" name="registroNombre">
+          </div>
 
-            <label for="nombre">Nombre Completo:</label>
-            <div class="input-group m-auto">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-user"></i></span>
-                </div>
-                <input type="text" class="form-control" id="nombre" name="registroNombre">
-            </div>
-        </div>
-
-        <div class="form-group m-2">
-            <label for="usuario">Usuario:</label>
-            <div class="input-group m-auto">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="fas fa-user-check"></i></span>
-                </div>
-            </div>
+          <div class="form-group m-2">
+            <label for="usuario">Usuario:<span class="simbolo">*</span> </label>
             <input type="text" class="form-control" id="usuario" name="registroUsuario">
-        </div>
+          </div>
 
-        <div class="form-group m-2">
-            <label for="">Contraseña:</label>
-            <div class="input-group m-auto">
-                <div class="input-group-prepend">
-                    <span class="input-group-text"></span>
-                </div>
-            </div>
+          <div class="form-group m-2">
+            <label for="">Contraseña:<span class="simbolo">*</span> </label>
             <input type="text" class="form-control" id="pwd" name="registroContraseña">
-        </div>
+          </div>
 
-        <?php
-    
-    // metodo no estatico
+          <?php
 
-    //$registro = new ControladorFormularios();
-    //$registro ->ctrRegistro();
-    
-    // metodo estatico
+          // metodo no estatico
 
-    $registro = ControladorFormularios::ctrRegistro();
+          //$registro = new ControladorFormularios();
+          //$registro ->ctrRegistro();
 
-     if($registro == "ok"){
+          // metodo estatico
 
-// para borrar la cache o datos para limpiar las variables post
-        echo '<script>
+          $registro = ControladorFormularios::ctrRegistro();
+
+          if ($registro == "ok") {
+
+            // para borrar la cache o datos para limpiar las variables post
+            echo '<script>
 
            if ( window.history.replaceState ) {
 
@@ -80,15 +59,15 @@
            }
         </script>';
 
-        echo '<div class="alert alert-success mt-3">El ususario ah sido registrado</div>';
-     }
+            echo '<div class="alert alert-success mt-3">El ususario ah sido registrado</div>';
+          }
 
-    ?>
+          ?>
 
-        <div class="d-flex justify-content-end">
+          <div class="d-flex justify-content-end">
             <button type="submit" class="btn-registro btn-primary mt-3">Registrar</button>
-        </div>
-    </form>
+          </div>
+        </form>
 
       </div>
     </div>

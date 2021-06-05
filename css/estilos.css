@@ -105,9 +105,9 @@ body {
 
 #zonaRegistro {
   position: absolute;
-  top: 1%;
-  padding: 0% 10%;
-  width: 100%;
+  top: 15%;
+  padding: 0% 17%;
+  width: 90%;
 }
 
 #zonaRegistro h1 {
@@ -121,7 +121,7 @@ body {
   font-size: 1rem;
   color: var(--textoRegistro);
   font-weight: 200;
-  margin-bottom: 2.5rem;
+
 }
 
 #zonaImagen {
@@ -304,6 +304,42 @@ font-weight: 600;
 #ingresarAlumnos {
   margin-top: 5rem;
 }
+
+#zonaInicio {
+  margin-top: 5rem;
+  border: 1px solid var(--textoRegistro);
+}
+
+
+/* EDITAR USUARIOS */
+
+#zonaEditar {
+  position: absolute;
+  top: 15%;
+  padding: 0% 17%;
+  width: 90%;
+}
+
+#zonaEditar h1 {
+  font-size: 2.25rem;
+  font-weight: 400;
+  color: var(--color-texto);
+  margin-top: 1rem;
+}
+
+#zonaEditar p {
+  font-size: 1rem;
+  color: var(--textoRegistro);
+  font-weight: 200;
+}
+
+#formularioEditar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
 
 /* FOOTER */
 

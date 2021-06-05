@@ -1,9 +1,7 @@
 <?php
     class ControladorFormularios {
 
-
-    // Registro
-
+        //----------------------------- REGISTRO-------------------------------------------
 
         static public function ctrRegistro() {
 
@@ -23,8 +21,7 @@
 
         }
 
-
-    // Seleccionar  Registros
+    //-------------------- SELECCIONAR REGISTROS--------------------------
     
         static public function ctrSeleccionarRegistros( $item, $valor) {
 
@@ -35,9 +32,9 @@
             return $respuesta;
         }
         
-    // Ingreso
+    // ---------------------INGRESO O LOGIN----------------------------
     
-    public function ctrIngreso() {
+      public function ctrIngreso() {
 
         if(isset($_POST["ingresoUsuario"])) {
 
@@ -82,7 +79,7 @@
 
         }
 
-        // ACTUALIZAR REGISTRO
+        //------------------------------ ACTUALIZAR REGISTRO--------------------------------------------
 
       static  public function ctrActualizarRegistro() {
 
@@ -115,7 +112,7 @@
                
         }
 
-        // ELIMINAR REGISTROS 
+        //--------------------------------- ELIMINAR REGISTROS -------------------------------------------------
 
         public function ctrEliminarRegistro(){
 
@@ -136,7 +133,7 @@
      
                 }
 
-                window.location = "index.php?pagina=inicio";
+                window.location = "index.php?pagina=usuarios";
 
              </script>';
 

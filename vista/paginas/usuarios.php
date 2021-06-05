@@ -1,51 +1,69 @@
 
-<div class="card" id="ingresarAlumnos">
+<?php
 
-<div class="card-body">
+// if (!isset($_SESSION["validarIngreso"])) {
 
-<table class="table table-striped" >
- <thead>
-    <tr>
-      <th>Nombres</th>
-      <th>Apellidos</th>
-      <th>Correo electronico</th>
-      <th>Contraseña</th>
-    </tr>
-  </thead>
+//     if ($_SESSION["validarIngreso"] != "ok") {
+//     echo '<script> window.location = "index.php?pagina=ingreso";</script>';
+//     return;
+//     }
+// } else {
 
-  <tbody>
-    <tr>
-      <th>Christian Camilo</th>
-      <td>Vega Morales</td>
-      <td>hasergecris9@gmail.com</td>
-      <td>1234</td>
-    </tr>
+//     echo '<script> window.location = "index.php?pagina=ingreso";</script>';
+//     return;
+    
+// }
 
-    <tr>
-      <th>Deisy Hasbleidy</th>
-      <td>Poveda Moreno</td>
-      <td>hasbleidy03@gmail.com</td>
-      <td>1234</td>
-    </tr>
+$usuarios = ControladorFormularios::ctrSeleccionarRegistros(null, null);
 
-    <tr>
-      <th>Sergio Damian </th>
-      <td>Vega Poveda</td>
-      <td>vega79073@gmail.com</td>
-      <td>1234</td>
-    </tr>
+?>
+<div id="zonaInicio">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Identificacion</th>
+                <th>Nombre Completo</th>
+                <th>Fecha</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
 
-     <tr>
-      <th>Johan Geronimo</th>
-      <td>Vega Poveda</td>
-      <td>geronimo@gmail.com</td>
-      <td>1234</td>
-    </tr>
+        <tbody>
 
-  </tbody>
-</table>
+            <?php foreach ($usuarios as $key => $value) : ?>
+                <tr>
+                    <td><?php echo ($key + 1); ?></td>
+                    <td><?php echo $value["identificacion"]; ?></td>
+                    <td><?php echo $value["nombre"]; ?></td>
+                    <td><?php echo $value["fecha"]; ?></td>
+                    <td>
+
+                        <div class="btn group d-flex">
+                            <div class="px-1">
+                                <a href="index.php?pagina=editar&id=<?php echo $value["id"]; ?>" class="btn btn-warning"><i class="fas fa-pencil-alt"></i></a>
+                            </div>
+
+
+                            <form method="post">
+                                <input type="hidden" value="<?php echo $value["id"]; ?>" name="eliminarRegistro">
+                                <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i></button>
+
+                                <?php
+
+                                $eliminar = new  ControladorFormularios();
+                                $eliminar->ctrEliminarRegistro();
+
+                                ?>
+
+                            </form>
+
+                        </div>
+                    </td>
+                </tr>
+
+            <?php endforeach ?>
+        </tbody>
+
+    </table>
 </div>
-</div>
-
-  
-

@@ -4,7 +4,7 @@ require_once "conexion.php";
 
 class ModeloFormularios {
 
-// Registro
+//----------------------------------- REGISTRO-------------------------------------------------------
 
 static public function mdlRegistro($tabla,$datos) {
 
@@ -23,8 +23,11 @@ static public function mdlRegistro($tabla,$datos) {
         print_r(Conexion::conectar()->errorInfo());
     }
 
-   
+  
 }
+
+
+// ------------------SELECCIONAR REGISTROS------------------------------------
 
 static public function mdlSeleccionarRegistros($tabla, $item, $valor) {
 
@@ -52,7 +55,7 @@ static public function mdlSeleccionarRegistros($tabla, $item, $valor) {
    
 }
 
-//ACTUALIZAR REGUISTRO
+//--------------------------ACTUALIZAR REGUISTRO-------------------------------------------------
 
 static public function mdlActualizarRegistro($tabla,$datos) {
 

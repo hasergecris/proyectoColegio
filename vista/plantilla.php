@@ -22,6 +22,7 @@
     <header>
       <nav class="navbar navbar-expand-md fixed-top">
         <div class="container-fluid">
+          
           <h3 class="navbar-brand">Colegio N.S de la Alegria</h3>
           <div class="nav justify-content-end py-2 nav-pills">
 
@@ -65,7 +66,7 @@
     </header>
   </div>
 
-
+<!-- ------------------LISTA BLANCA-------- -->
   <div class="container py-5">
     <?php
 
@@ -76,7 +77,8 @@
         $_GET["pagina"] == "ingreso" ||
         $_GET["pagina"] == "inicio" ||
         $_GET["pagina"] == "salir" ||
-        $_GET["pagina"] == "usuarios"
+        $_GET["pagina"] == "usuarios"||
+        $_GET["pagina"] == "editar" 
       ) {
 
         include "paginas/" . $_GET["pagina"] . ".php";
@@ -88,20 +90,18 @@
 
       include "paginas/ingreso.php";
     }
-
-
-    ?>
+  ?>
   </div>
   <footer class="footer">
     <div class="row p-3">
       <div class="col-sm-12 col-md-6">
-        <h3 class="navbar-brand">nombre de la apli</h3>
+        <h3 class="navbar-brand">Colegio N.S de la Alegria</h3>
         <p>Es una plataforma para que los instituciones educativas puedan generar y crear datos de una forma segura y confiable.</p>
       </div>
       <div class="col-sm-12 col-md-3">
         <a href="#" class="enlaces">Acerca del colegio</a>
-        <a href="#" class="enlaces">ingresar</a>
         <a href="#" class="enlaces">registrar</a>
+        <a href="#" class="enlaces">ingresar</a>
         <a href="#" class="enlaces">inicio</a>
       </div>
 
