@@ -71,18 +71,21 @@ if (isset($_GET["id"])) {
             }
          </script>';
 
-                        echo '<div class="alert alert-success mt-3">El ususario ah sido Actualizado</div>';
+          echo '<div class="alert alert-success mt-3">El ususario ah sido Actualizado</div>';
 
-                        '<script>
+                        
+          
+        '<script>
 
          setTimeout(function(){
      
             window.location = "index.php?pagina=inicio";
              
          },3000);
+
          </script>';
-                    }
-                    ?>
+    }          
+ ?>
 
                     <div class="d-flex justify-content-end">
                         <button type="submit" class="btn-registro btn-primary mt-3">Editar</button>

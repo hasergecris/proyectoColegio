@@ -78,7 +78,7 @@ body {
 /* REGISTRO */
 
 .card {
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   border: none;
   box-shadow: 10px 10px 10px var(--bordes);
 }
@@ -121,7 +121,6 @@ body {
   font-size: 1rem;
   color: var(--textoRegistro);
   font-weight: 200;
-
 }
 
 #zonaImagen {
@@ -270,26 +269,24 @@ label {
   background: var(--hover-claro);
 }
 
-
 /* ZONA DASHBOARD */
 
-#zonaDashboard { 
+#zonaDashboard {
   padding-top: 10%;
 }
 
 #zonaDashboard .card {
-  background:var(--fondo);
+  background: var(--fondo);
 }
 
 #zonaDashboard a {
   text-decoration: none;
-} 
-
+}
 
 #zonaDashboard .btn {
-color:var(--negro);
-font-size: 1.5rem;
-font-weight: 600;
+  color: var(--negro);
+  font-size: 1.5rem;
+  font-weight: 600;
 }
 
 .imagen {
@@ -309,7 +306,6 @@ font-weight: 600;
   margin-top: 5rem;
   border: 1px solid var(--textoRegistro);
 }
-
 
 /* EDITAR USUARIOS */
 
@@ -340,7 +336,6 @@ font-weight: 600;
   padding: 2rem;
 }
 
-
 /* FOOTER */
 
 .footer {
@@ -366,8 +361,6 @@ font-weight: 600;
   line-height: 3rem;
 }
 
-
-
 .final {
   color: var(--textoRegistro);
   font-size: 0.875rem;
@@ -392,7 +385,7 @@ font-weight: 600;
   font-size: 1rem;
 }
 
-.iconos {
+.iconos a {
   color: var(--azul);
   font-size: 1.7rem;
   margin-top: 1rem;

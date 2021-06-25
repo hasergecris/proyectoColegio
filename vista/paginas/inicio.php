@@ -5,7 +5,7 @@
         <div class="card-body">
           <img src="img/alumnos.jpg" class="imagen" alt="" />
           <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-lg">Usuarios</button>
+            <p class="btn">Usuarios</p>
           </div>
         </div>
       </a>
@@ -16,7 +16,7 @@
         <div class="card-body">
         <img src="img/gruponiños.jpg" class="imagen" alt=""/>
           <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-lg">Administrar Grupos</button>
+            <p class="btn">Ingreso de alumnos</p>
           </div>
         </div>
     </a>
@@ -27,7 +27,7 @@
         <div class="card-body">
         <img src="img/entreganotas.jpg" class="imagen" alt=""/>
           <div class="d-flex justify-content-center align-items-center">
-           <button class="btn btn-lg">Boletines</button>
+           <p class="btn">Boletines</p>
           </div>
         </div>
       </a>
@@ -38,7 +38,7 @@
         <div class="card-body">
          <img src="img/profesores.jpg" class="imagen" alt=""/>
           <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-lg">Administrar Docentes</button>
+            <p class="btn">Administrar Docentes</p>
           </div>
         </div>
       </a>
@@ -49,7 +49,7 @@
         <div class="card-body">
         <img src="img/materias.jpg" class="imagen" alt=""/>
           <div class="d-flex justify-content-center align-items-center">
-             <button class="btn btn-lg">Registrar Materias</button>
+             <p class="btn">Registrar Materias</p>
           </div>
         </div>
       </a>
@@ -60,7 +60,7 @@
         <div class="card-body">
         <img src="img/notas.jpg" class="imagen" alt=""/>
           <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-lg">Registrar Calificaciones</button>
+            <p class="btn">Registrar Calificaciones</p>
           </div>
         </div>
       </a>
@@ -71,7 +71,7 @@
         <div class="card-body">
         <img src="img/asignaturas.jpg" class="imagen" alt=""/>
           <div class="d-flex justify-content-center align-items-center">
-            <button class="btn btn-lg">Materias de Docentes</button>
+            <p class="btn">Materias de Docentes</p>
           </div>
         </div>
       </a>

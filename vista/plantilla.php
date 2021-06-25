@@ -78,6 +78,8 @@
         $_GET["pagina"] == "inicio" ||
         $_GET["pagina"] == "salir" ||
         $_GET["pagina"] == "usuarios"||
+        $_GET["pagina"] == "ingresoAlumnos"||
+        $_GET["pagina"] == ""||
         $_GET["pagina"] == "editar" 
       ) {
 
@@ -111,7 +113,7 @@
 
         <div class="row iconos">
           <div class="col-auto">
-            <i class="fab fa-facebook-f"></i>
+              <i class="fab fa-facebook-f"></i>
           </div>
           <div class="col-auto">
             <i class="fab fa-instagram"></i>

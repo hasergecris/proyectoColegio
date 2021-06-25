@@ -29,7 +29,6 @@
 
                <?php
 
-
                 $ingreso = new ControladorFormularios();
                 $ingreso -> ctrIngreso();
 
